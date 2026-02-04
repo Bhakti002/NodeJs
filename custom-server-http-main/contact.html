@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Sports Manage</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER_PLACEHOLDER -->
+  
+  <main>
+    <section class="page-header">
+      <h1>Contact Us</h1>
+      <p>Get in touch with our team for questions, support, or partnership opportunities</p>
+    </section>
+    
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>We're here to help with any questions about our sports management solutions. Reach out to us through any of the following channels:</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="method-details">
+              <h3>Call Us</h3>
+              <p>+1 (555) 123-4567</p>
+              <p class="method-note">Mon-Fri, 9am-6pm EST</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="method-details">
+              <h3>Email Us</h3>
+              <p>info@sportsmanage.com</p>
+              <p class="method-note">We respond within 24 hours</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="method-details">
+              <h3>Visit Us</h3>
+              <p>123 Sports Ave, Suite 100</p>
+              <p>City, State 12345</p>
+              <p class="method-note">By appointment only</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-contact">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+        
+        <form id="contactForm" action="/submit-contact" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="sales">Sales Question</option>
+              <option value="support">Technical Support</option>
+              <option value="partnership">Partnership Opportunity</option>
+              <option value="feedback">Product Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER_PLACEHOLDER -->
+  
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+    
+    // Contact form validation and submission
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      // Basic client-side validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+      
+      if (!name || !email || !subject || !message) {
+        e.preventDefault();
+        alert('Please fill in all required fields marked with *');
+        return false;
+      }
+      
+      // Email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        e.preventDefault();
+        alert('Please enter a valid email address');
+        return false;
+      }
+      
+      // If all validation passes, the form will submit to our server
+      // In a real application, you might show a loading indicator here
+    });
+  </script>
+</body>
+</html>

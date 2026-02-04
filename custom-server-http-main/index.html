@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Sports Manage</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER_PLACEHOLDER -->
+  
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Professional Sports Management Solutions</h2>
+        <p>Streamline your sports organization with our comprehensive management platform. From team coordination to event planning, we've got you covered.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary">Get Started Today</a>
+          <a class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Management" class="simple-hero-img">
+      </div>
+    </section>
+    
+    <section class="features">
+      <div class="section-header">
+        <h2>Our Core Features</h2>
+        <p>Everything you need to manage your sports organization efficiently</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Team Management</h3>
+          <p>Manage player rosters, schedules, and communications all in one place.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Event Scheduling</h3>
+          <p>Plan and organize games, practices, and events with our intuitive calendar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Performance Analytics</h3>
+          <p>Track player and team performance with detailed statistics and reports.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-money-check-alt"></i>
+          </div>
+          <h3>Financial Management</h3>
+          <p>Handle budgets, payments, and expenses with our secure financial tools.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="testimonials">
+      <div class="section-header">
+        <h2>What Our Clients Say</h2>
+        <p>Trusted by sports organizations worldwide</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"Sports Manage transformed how we run our basketball league. Everything is so much more organized now!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MJ</div>
+            <div class="author-info">
+              <h4>Michael Johnson</h4>
+              <p>League Commissioner, City Basketball</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"The player management features saved us countless hours of administrative work each week."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">SR</div>
+            <div class="author-info">
+              <h4>Sarah Roberts</h4>
+              <p>Team Manager, United Soccer Club</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER_PLACEHOLDER -->
+  
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+    
+    // Newsletter form submission
+    document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with ${email}! You'll receive updates soon.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

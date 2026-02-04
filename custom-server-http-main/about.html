@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sports Manage</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER_PLACEHOLDER -->
+  
+  <main>
+    <section class="page-header">
+      <h1>About Sports Manage</h1>
+      <p>Professional sports management solutions since 2010</p>
+    </section>
+    
+    <section class="about-content">
+      <div class="about-text">
+        <h2>Our Mission</h2>
+        <p>At Sports Manage, we're dedicated to transforming how sports organizations operate. Our mission is to provide comprehensive, user-friendly management solutions that empower teams, leagues, and athletes to focus on what matters most - performance and growth.</p>
+        
+        <h2>Our Story</h2>
+        <p>Founded in 2010 by former sports administrators who saw firsthand the challenges of managing complex sports organizations, Sports Manage started as a simple scheduling tool. Today, we've grown into a full-service sports management platform serving over 500 organizations worldwide.</p>
+        
+        <h2>Our Values</h2>
+        <div class="values-grid">
+          <div class="value-item">
+            <h3><i class="fas fa-bullseye"></i> Excellence</h3>
+            <p>We strive for excellence in everything we do, from our software to our customer support.</p>
+          </div>
+          <div class="value-item">
+            <h3><i class="fas fa-hands-helping"></i> Collaboration</h3>
+            <p>We work closely with our clients to develop solutions that meet their unique needs.</p>
+          </div>
+          <div class="value-item">
+            <h3><i class="fas fa-rocket"></i> Innovation</h3>
+            <p>We continuously innovate to stay ahead of the evolving needs of sports organizations.</p>
+          </div>
+          <div class="value-item">
+            <h3><i class="fas fa-shield-alt"></i> Integrity</h3>
+            <p>We operate with transparency and honesty in all our business dealings.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <div class="stats-card">
+          <h3>Our Impact</h3>
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Organizations Served</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">99%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="team">
+      <div class="section-header">
+        <h2>Meet Our Leadership Team</h2>
+        <p>The experts behind Sports Manage</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-avatar">AJ</div>
+          <h3>Alex Johnson</h3>
+          <p class="member-title">CEO & Founder</p>
+          <p>Former league commissioner with 15+ years in sports administration.</p>
+        </div>
+        <div class="team-member">
+          <div class="member-avatar">MS</div>
+          <h3>Maria Sanchez</h3>
+          <p class="member-title">CTO</p>
+          <p>Tech innovator specializing in scalable sports management solutions.</p>
+        </div>
+        <div class="team-member">
+          <div class="member-avatar">DW</div>
+          <h3>David Wilson</h3>
+          <p class="member-title">Head of Customer Success</p>
+          <p>Dedicated to ensuring every client gets maximum value from our platform.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER_PLACEHOLDER -->
+  
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+    
+    // Animate stats on scroll
+    const observerOptions = {
+      threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.stat-number').forEach(stat => {
+      observer.observe(stat);
+    });
+  </script>
+</body>
+</html>
